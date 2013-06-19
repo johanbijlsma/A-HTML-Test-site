@@ -1,0 +1,69 @@
+/*grid.less*/
+/*column = 60px*/
+/*12 columns = 720px (zonder gutters) */
+/*alle gutters in PSD zijn 10 px*/
+/*gutters aan beide zijden*/
+/*totaal =  60 + 10 (links) + 10 (rechts) * 12 = 960px */
+.col {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-height: 20px;
+}
+.col:last-of-type {
+  margin-right: 0px;
+}
+.col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col1-12 {
+  width: 60px;
+}
+.col2-12 {
+  width: 140px;
+}
+.col3-12 {
+  width: 220px;
+}
+.col4-12 {
+  width: 300px;
+}
+.col6-12 {
+  width: 460px;
+}
+.col12-12 {
+  width: 940px;
+  margin-top: 3em;
+}
+.menucol {
+  float: left;
+  min-height: 52px;
+}
+.menucol:last-of-type {
+  margin-right: 0px;
+}
+.menucol:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.menucol1-12 {
+  width: 78px;
+}
+.menucol2-12 {
+  width: 157px;
+}
+.menucol3-12 {
+  width: 235px;
+}
+.menucol4-12 {
+  width: 314px;
+}
+.menucol6-12 {
+  width: 471px;
+}
+.menucol12-1 {
+  width: 941px;
+}

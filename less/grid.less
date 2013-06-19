@@ -1,0 +1,114 @@
+/*grid.less*/
+
+/*column = 60px*/
+/*12 columns = 720px (zonder gutters) */
+/*alle gutters in PSD zijn 10 px*/
+/*gutters aan beide zijden*/
+/*totaal =  60 + 10 (links) + 10 (rechts) * 12 = 960px */
+
+// Bereken van de maten voor posities
+@baseWidth: 720px;
+@gutter: 10px;
+@col1-12: (@baseWidth / 12);
+@col2-12: (@baseWidth / 6);
+@col3-12: (@baseWidth / 4);
+@col4-12: (@baseWidth / 3);
+@col6-12: (@baseWidth / 2 );
+@col12-12: (@baseWidth / 1);
+
+// berekenen van de gutters
+@gutter2-12: (@gutter * 2);
+@gutter3-12: (@gutter * 4);
+@gutter4-12: (@gutter * 6);
+@gutter6-12: (@gutter * 10);
+@gutter12-12: (@gutter * 22);
+
+
+.col{
+	float: left; 
+	margin-left: 10px;
+	margin-right: 10px;
+	min-height: 20px;
+}
+
+.col:last-of-type{
+	margin-right: 0px;
+	// margin-left: 0px;
+}
+.col:after{
+	content: "";
+	display: table;
+	clear: both;
+	// -webkit-box-sizing: border-box;
+ //  	-moz-box-sizing: border-box;
+ //  	box-sizing: border-box;
+
+}
+
+.col1-12{
+	width: @col1-12;
+	// background: yellow; 
+}
+
+.col2-12{
+	width: @col2-12 + @gutter2-12;
+	// background: orange; 
+}
+
+.col3-12{
+	width: @col3-12 + @gutter3-12;
+	// background: red; 
+}
+
+.col4-12{
+	width: @col4-12 + @gutter4-12;
+	// background: purple; 
+}
+
+.col6-12{
+	width: @col6-12 + @gutter6-12;
+	// background: blue; 
+}
+.col12-12{
+	width: @col12-12 + @gutter12-12;
+	margin-top: 3em;
+// 	background: gold; 
+ }
+
+ // Menu
+ // geen gutters alleen uitrekenen wat de maat moet zijn.
+ // handmatig de class aanpassen in het breuk die nodig border-image-source: 
+
+@menuWidth: 941px;
+// @gutter: 0px;
+@menucol1-12: round(@menuWidth / 12);
+@menucol2-12: round(@menuWidth / 6);
+@menucol3-12: round(@menuWidth / 4);
+@menucol4-12: round(@menuWidth / 3);
+@menucol6-12: round(@menuWidth / 2 );
+@menucol12-12: round(@menuWidth / 1);
+
+.menucol{
+	float: left; 
+	// margin-left: 10px;
+	// margin-right: 10px;
+	min-height: 52px;
+
+}
+
+.menucol:last-of-type{
+	margin-right: 0px;
+	// margin-left: 0px;
+}
+.menucol:after{
+	content: "";
+	display: table;
+	clear: both;
+	}
+
+.menucol1-12{width:@menucol1-12;}
+.menucol2-12{width:@menucol2-12;}
+.menucol3-12{width:@menucol3-12;}
+.menucol4-12{width:@menucol4-12;}
+.menucol6-12{width:@menucol6-12;}
+.menucol12-1{width:@menucol12-12;}
